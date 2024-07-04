@@ -11,8 +11,11 @@ print("""  ======= Selecione uma operação =======
 option = float(input('Escolha sua Operação --- '))
 #Condição
 if option == 1:
-    divi = n1 / n2 
-    print(f'A divisão entre {n1}, e {n2} é igual há: {divi} ')
+    if n1 == 0 or n2 == 0:
+        print('Não foi possível realizar a divisão')
+    else:
+        div = n1 / n2
+        print(f'A divisão entre {n1}, e {n2} é igual há: {div} ')
 elif option == 2:
     mult = n1 * n2
     print(f'A multiplicação entre {n1} e {n2} é igual há: {mult}')

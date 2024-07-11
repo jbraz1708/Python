@@ -3,7 +3,10 @@ def soma (n1,n2):
 def subtração (n1,n2):
     return n1 - n2
 def divisão (n1,n2):
-    return n1 / n2 
+    if n1 == 0 and n2 ==0:
+        print('Não foi possível efetuar a divisão:')
+    else:
+        return n1 / n2 
 def multiplicação (n1,n2):
     return n1 * n2
 
@@ -16,10 +19,7 @@ print("""  ======= Selecione uma operação =======
 [4] subtração""")
 option = int(input('Escolha uma opção: '))
 if option == 1:
-    if n1 == 0 and n2 == 0:
-        print('não foi possível realizar a divisão')
-    else:
-        print(f"A divisão entre {n1} e {n2} é: {divisão(n1,n2)}")
+    print(f"A divisão entre {n1} e {n2} é: {divisão(n1,n2)}")
 elif option == 2:
     print(f"A multiplicação entre {n1} e {n2} é: {multiplicação(n1,n2)}")
 elif option == 3:
